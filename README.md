@@ -105,4 +105,6 @@ Metoda cwd() ndryshon directory-n aktual të punës.
 
 ### Përfundim
 
-Në këtë post, ne diskutuam se çfarë është FTP dhe si funksionon me ndihmën e shembujve të ndryshëm. Ne gjithashtu pamë se si të përdorim modulet "tkinter" dhe "ftplib" të Python për të komunikuar me një server të largët duke përdorur FTP dhe pamë disa funksione të tjera që ofrojn këto module. Në fund, ne diskutuam gjithashtu disa alternativa më të sigurta për FTP, të tilla si SFTP dhe SSH, të cilat përdoren për transferimin e informacionit të ndjeshëm.
+Në këtë post, ne diskutuam se çfarë është FTP dhe si funksionon me ndihmën e shembujve të ndryshëm. Ne gjithashtu pamë se si të përdorim modulet "tkinter" dhe "ftplib" të Python për të komunikuar me një server të largët duke përdorur FTP dhe pamë disa funksione të tjera që ofrojnë këto module. Në fund, ne diskutuam gjithashtu disa alternativa më të sigurta për FTP, të tilla si SFTP dhe SSH, të cilat përdoren për transferimin e informacionit të ndjeshëm.
+
+![alt text](README/lastOne.jpg)
