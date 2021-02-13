@@ -32,19 +32,23 @@ Pas kësaj, duhet të fillojmë një lidhje me serverin FTP me të cilin duam t�
 
 Funksioni connect() merr hostin dhe portin dhe fillon një sesion me serverin.
 
+![alt-text-1](README/4.jpg)
+
 Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet të vërtetojë sesionin tonë. Nëse kredencialet tona verifikohen, ne kemi hyrë në server dhe mund të fillojmë të dërgojmë më shumë komanda; nëse jo, një kundërshtim error_perm do të shfaqet.<br />
 
-![alt-text-1](README/4.jpg) | ![alt-text-2](README/5.jpg)
+![alt-text-2](README/5.jpg)
 
 ### Shkarkimi i skedarëve
 
-Shkarkimi i skedarëve nga një server FTP përfshin ose njërën nga metodat retrbinary(). Ashtu si storbinary(), secila metodë merr një varg komande si argumentin e saj të parë, por në këtë rast duhet të jetë një komandë e vlefshme RETR (zakonisht "RETR filename" do të mjaftojë).
+Shkarkimi i skedarëve nga një server FTP përfshin njërën nga metodat retrbinary(). Ashtu si storbinary(), secila metodë merr një varg komande si argumentin e saj të parë, por në këtë rast duhet të jetë një komandë e vlefshme RETR (zakonisht "RETR filename" do të mjaftojë).
 
-Argumenti i dytë është një funksion i kthimit prapa i cili do të thirret në çdo pjesë (për retrbinary()). Kjo thirrje mund të përdoret për të ruajtur të dhënat e shkarkuara.
+Argumenti i dytë është një funksion i kthimit prapa i cili do të thirret në çdo pjesë për retrbinary(). Kjo thirrje mund të përdoret për të ruajtur të dhënat e shkarkuara.
 
 > `ftp.retrbinary("RETR " + file, down.write)` <br />
 
 ![alt text](README/down.jpg)
+
+![alt text](README/server-download.jpg)
 
 ### Ngarkimi i skedarëve
 
@@ -56,7 +60,10 @@ Për të dërguar skedarin, ne duhet ta hapim atë në modalitetin e leximit bin
 
 Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në modalitetin binar pasi që ne po e dërgojmë atë si të dhëna binare. Kjo mund të duket e çuditshme pasi skedari CSV që po dërgojmë është në thelb një skedar teksti i thjeshtë, por dërgimi i tij si të dhëna binare garanton që serveri nuk do ta ndryshojë skedarin në asnjë mënyrë gjatë transportimit; kjo është pothuajse gjithmonë ajo që ne dëshirojmë kur transferojmë skedarë, pavarësisht nga natyra e të dhënave që shkëmbehen.
 
-![alt](README/upload.jpg) | ![alt](README/server.jpg)
+<!-- ![alt](README/upload.jpg) | ![alt](README/server.jpg) -->
+
+ <img align="left" width="600" height="200" src="README/upload.jpg">
+ <img align="right" width="600" height="200" src="README/server.jpg">
 
 ### Listimi i skedarëve
 
@@ -79,11 +86,11 @@ Natyrisht, suksesi i metodës varet nga lejet e dhëna në llogarinë e përdoru
 
 ### Krijimi i directory-it
 
-Nje directory krijohet me metoden mkd(). Ky operacion kërkon një llogari përdoruesi me privilegje të mjaftueshme; nuk është në dispozicion me llogari anonime.
+Një directory krijohet me metodën mkd(). Ky operacion kërkon një llogari përdoruesi me privilegje të mjaftueshme; nuk është në dispozicion me llogari anonime.
 
 > `ftp.mkd(directory)`
 
-<img src="README/createDirectory.jpg" width="425"/> <img src="README/server2.jpg" width="425"/>
+<img src="README/createDirectory.jpg" width="200"/> <img src="README/server2.jpg" width="300"/>
 
 <!-- ![alt text](README/createDirectory.jpg)
 
@@ -91,7 +98,7 @@ Nje directory krijohet me metoden mkd(). Ky operacion kërkon një llogari përd
 
 ### Ndryshimi i path-it
 
-Metoda cwd() ndryshon drejtorinë aktuale të punës.
+Metoda cwd() ndryshon directory-n aktual të punës.
 
 > `ftp.cwd(directory)` <br />
 
