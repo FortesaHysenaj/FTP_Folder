@@ -112,5 +112,7 @@ Në këtë post, ne diskutuam se çfarë është FTP dhe si funksionon me ndihm�
 ## Anëtarët
 
 [Argjend Istogu](https://github.com/ArgjendIstogu)
+
 [Dafina Imeraj](https://github.com/DafinaaImeraj)
+
 [Fortesa Hysenaj](https://github.com/FortesaHysenaj)
