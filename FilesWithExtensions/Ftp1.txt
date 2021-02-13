@@ -1,0 +1,96 @@
+Universiteti i Prishtinës “Hasan Prishtina”
+Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike
+ 
+Detyra: Zhvillimi i aplikacionit që mundëson që fajllat me ekstension .doc, .docx, .xls, .xlsx në një folder të caktuar të ngarkohen në një FTP server të caktuar.
+Lënda:”Siguria në Internet”
+
+												
+
+                                        
+  
+
+
+   Studentët:
+   Argjend Istogu                                                       Profesor: Prof.Dr.Blerim Rexha                                            
+   Fortesa Hysenaj                                                     Asistent: Msc.Arbor Halili                                       
+   Dafina Imeraj 
+                                                   Prishtinë, 2021                                                  
+                                                                                                        
+Përmbajtja:
+Abstrakt………………………………………………………………..1
+Hyrje……………………………………………………………………2
+Konkludime……………………………………………………………..3
+Referenca………………………………………………………………..4
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstrakt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hyrje
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Konkludime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Referencat
+
+
+
+
+
+
