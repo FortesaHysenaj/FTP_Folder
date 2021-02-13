@@ -20,13 +20,13 @@ FTP është një protokoll standard i rrjetit që përdoret për transferimin e 
 ## Puna me FTP dhe GUI ne Python
 
 Modulin tkinter e kemi përdorur për të krijuar UI ndërsa me modulin ftplib kemi trajtuar navigimin/komandat e serverit.
-Moduli ftplib është një librari e integruar që vjen tashmë e instaluar me Python, gjithçka që duhet të bëni është ta importoni në skenarin tuaj dhe mund të filloni të përdorni funksionet e tij. Për ta importuar atë, përdorni komandën e mëposhtme:
+Moduli ftplib është një librari e integruar që vjen tashmë e instaluar me Python, të cilën mjafton ta importojmë në skenar dhe mund të shfrytëzojmë funksionet që ofron. Për ta importuar këtë librari, duhet ndjekur komandën si në vijim:
 
 > `from ftplib import FTP` <br />
 
 ![alt text](README/1.jpg)
 
-Pas kësaj, duhet të fillojmë një lidhje me serverin FTP me të cilin duam të hapim një lidhje komunikimi. Për ta bërë këtë, krijoni një ftp, shembull:
+Pas kësaj, duhet të fillojmë një lidhje me serverin FTP me të cilin duam të hapim një lidhje komunikimi. Për ta realizuar këtë, duhet të krijojmë një ftp, si në vazhdim:
 
 > `with ftp.FTP() as ftp_cx:` <br />`ftp_cx.connect(ftp_host, ftp_port)` <br />`ftp_cx.login(ftp_user, ftp_pass)` <br />
 
@@ -34,7 +34,7 @@ Funksioni connect() merr hostin dhe portin dhe fillon një sesion me serverin.
 
 ![alt-text-1](README/4.jpg)
 
-Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet të vërtetojë sesionin tonë. Nëse kredencialet tona verifikohen, ne kemi hyrë në server dhe mund të fillojmë të dërgojmë më shumë komanda; nëse jo, një kundërshtim error_perm do të shfaqet.<br />
+Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet të vërtetojë sesionin tonë. Nëse kredencialet tona verifikohen, ne kemi hyrë në server dhe mund të fillojmë të dërgojmë më shumë komanda; nëse jo, një kundërshtim "error_perm" do të shfaqet.<br />
 
 ![alt-text-2](README/5.jpg)
 
