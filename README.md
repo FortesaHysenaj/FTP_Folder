@@ -46,9 +46,7 @@ Argumenti i dytë është një funksion i kthimit prapa i cili do të thirret n�
 
 > `ftp.retrbinary("RETR " + file, down.write)` <br />
 
-![alt text](README/down.jpg)
-
-![alt text](README/server-download.jpg)
+<img src="README/down.jpg" width="400"/> <img src="README/server-download.jpg" width="400"/>
 
 ### Ngarkimi i skedarëve
 
@@ -60,9 +58,7 @@ Për të dërguar skedarin, ne duhet ta hapim atë në modalitetin e leximit bin
 
 Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në modalitetin binar pasi që ne po e dërgojmë atë si të dhëna binare. Kjo mund të duket e çuditshme pasi skedari CSV që po dërgojmë është në thelb një skedar teksti i thjeshtë, por dërgimi i tij si të dhëna binare garanton që serveri nuk do ta ndryshojë skedarin në asnjë mënyrë gjatë transportimit; kjo është pothuajse gjithmonë ajo që ne dëshirojmë kur transferojmë skedarë, pavarësisht nga natyra e të dhënave që shkëmbehen.
 
-<!-- ![alt](README/upload.jpg) | ![alt](README/server.jpg) -->
-
-<img src="README/upload.jpg" width="350"/> <img src="README/server.jpg" width="350"/>
+<img src="README/upload.jpg" width="400"/> <img src="README/server.jpg" width="400"/>
 
 ### Listimi i skedarëve
 
@@ -89,7 +85,7 @@ Një directory krijohet me metodën mkd(). Ky operacion kërkon një llogari pë
 
 > `ftp.mkd(directory)`
 
-<img src="README/createDirectory.jpg" width="350"/> <img src="README/server2.jpg" width="350"/>
+<img src="README/createDirectory.jpg" width="400"/> <img src="README/server2.jpg" width="400"/>
 
 <!-- ![alt text](README/createDirectory.jpg)
 
@@ -102,3 +98,11 @@ Metoda cwd() ndryshon directory-n aktual të punës.
 > `ftp.cwd(directory)` <br />
 
 ![alt text](README/10.jpg)
+
+### Kujdes!
+
+Është e rëndësishme të theksohet se ndërsa FTP është mjaft i sigurt vetë, ai nuk përdoret zakonisht për të transferuar informacione të ndjeshme; nëse po transferoni diçka të tillë, atëherë duhet të shikoni për mundësi më të sigurta si SFTP (Secure FTP) ose SSH (Secure Shell). Këto janë protokollet më të përdorura për trajtimin e transmetimit të të dhënave të ndjeshme.
+
+### Përfundim
+
+Në këtë post, ne diskutuam se çfarë është FTP dhe si funksionon me ndihmën e shembujve të ndryshëm. Ne gjithashtu pamë se si të përdorim modulet "tkinter" dhe "ftplib" të Python për të komunikuar me një server të largët duke përdorur FTP dhe pamë disa funksione të tjera që ofrojn këto module. Në fund, ne diskutuam gjithashtu disa alternativa më të sigurta për FTP, të tilla si SFTP dhe SSH, të cilat përdoren për transferimin e informacionit të ndjeshëm.
