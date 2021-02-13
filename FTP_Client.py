@@ -37,7 +37,6 @@ def loginServer():
     except:
         text_servermsg.insert(END,"\n")
         text_servermsg.insert(END,"Unable to login")
-
         
 def displayDir():
     libox_serverdir.insert(0,"--------------------------------------------")
@@ -186,7 +185,6 @@ btn_delfile.place(x=700,y=540)
 btn_downfile.place(x=850,y=450)
 btn_upfile.place(x=850,y=480)
 btn_quit.place(x=850,y=510)
-
 
 #Krijimi
 window.mainloop()
