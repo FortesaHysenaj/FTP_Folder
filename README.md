@@ -62,8 +62,7 @@ Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në moda
 
 <!-- ![alt](README/upload.jpg) | ![alt](README/server.jpg) -->
 
- <img align="left" width="600" height="200" src="README/upload.jpg">
- <img align="right" width="600" height="200" src="README/server.jpg">
+<img src="README/upload.jpg" width="350"/> <img src="README/server.jpg" width="350"/>
 
 ### Listimi i skedarëve
 
@@ -90,7 +89,7 @@ Një directory krijohet me metodën mkd(). Ky operacion kërkon një llogari pë
 
 > `ftp.mkd(directory)`
 
-<img src="README/createDirectory.jpg" width="200"/> <img src="README/server2.jpg" width="300"/>
+<img src="README/createDirectory.jpg" width="350"/> <img src="README/server2.jpg" width="350"/>
 
 <!-- ![alt text](README/createDirectory.jpg)
 
