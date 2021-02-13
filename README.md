@@ -62,7 +62,7 @@ Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në moda
 
 ### Listimi i skedarëve
 
-Metoda që kemi përdorur për renditjen e skedarëve në një server FTP është nlst (), e cila korrespondon me komandën e vjetër NLST.
+Metoda që kemi përdorur për renditjen e skedarëve në një server FTP është nlst(), e cila korrespondon me komandën e vjetër NLST.
 Metoda pranon një numër arbitrar të argumenteve që do t'i bashkangjiten fjalë për fjalë vargut të komandës në server.
 
 > `dirlist = ftp.nlst()` <br />
@@ -75,7 +75,7 @@ Fshirja e skedarëve duke përdorur ftplib është shumë e thjeshtë. Metoda de
 
 Natyrisht, suksesi i metodës varet nga lejet e dhëna në llogarinë e përdorur për tu kyçur.
 
-> `ftp.rmd(directory)`
+> `msg = ftp.delete(file)`
 
 ![alt text](README/9.jpg)
 
@@ -83,21 +83,25 @@ Natyrisht, suksesi i metodës varet nga lejet e dhëna në llogarinë e përdoru
 
 Një directory krijohet me metodën mkd(). Ky operacion kërkon një llogari përdoruesi me privilegje të mjaftueshme; nuk është në dispozicion me llogari anonime.
 
-> `ftp.mkd(directory)`
+> `msg = ftp.mkd(directory)`
 
 <img src="README/createDirectory.jpg" width="420"/> <img src="README/server2.jpg" width="400"/>
-
-<!-- ![alt text](README/createDirectory.jpg)
-
-![alt text](README/server2.jpg) -->
 
 ### Ndryshimi i path-it
 
 Metoda cwd() ndryshon directory-n aktual të punës.
 
-> `ftp.cwd(directory)` <br />
+> `msg = ftp.cwd(directory)` <br />
 
 ![alt text](README/10.jpg)
+
+### Fshirja e një folder-i
+
+Metoda rmd() heq një directory nga serveri FTP dhe është një ndër komandat themelore të FTP-së.
+
+> `msg = ftp.rmd(directory)`
+
+![alt text](README/rmd.jpg)
 
 ### Kujdes!
 
@@ -105,7 +109,7 @@ Metoda cwd() ndryshon directory-n aktual të punës.
 
 ### Përfundim
 
-Në këtë post, ne diskutuam se çfarë është FTP dhe si funksionon me ndihmën e shembujve të ndryshëm. Ne gjithashtu pamë se si të përdorim modulet "tkinter" dhe "ftplib" të Python për të komunikuar me një server të largët duke përdorur FTP dhe pamë disa funksione të tjera që ofrojnë këto module. Në fund, ne diskutuam gjithashtu disa alternativa më të sigurta për FTP, të tilla si SFTP dhe SSH, të cilat përdoren për transferimin e informacionit të ndjeshëm.
+Në këtë raport, ne diskutuam se çfarë është FTP dhe si funksionon me ndihmën e shembujve të ndryshëm. Ne gjithashtu pamë se si të përdorim modulet "tkinter" dhe "ftplib" të Python për të komunikuar me një server të largët duke përdorur FTP dhe pamë disa funksione të tjera që ofrojnë këto module. Në fund, ne diskutuam gjithashtu disa alternativa më të sigurta për FTP, të tilla si SFTP dhe SSH, të cilat përdoren për transferimin e informacionit të ndjeshëm.
 
 ![alt text](README/lastOne.jpg)
 
