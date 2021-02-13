@@ -7,11 +7,11 @@ Zhvillimi i aplikacionit që mundeson qe fajllat me ekstension .doc, .docx, .xls
 - Sistemi Operativ - Windows 10 Pro
 - Gjuha Programuese - Python
 
-## Pershkrimi
+## Përshkrimi
 
 Në këtë detyrë, kemi shqyrtuar se si të përdorim FTP me Python për të dërguar dhe marrë skedarë nga një server përmes lidhjeve TCP/IP.
 
-Për t'i bërë gjërat më të lehta dhe më abstrakte, ne kemi përdorur librarite tkinter dhe ftplib të Python te cilat ofrojn një sërë funksionesh që e bëjnë më të lehtë punën me FTP. Ne do të shohim zbatimin për ngarkimin dhe shkarkimin e skedarëve nga serveri, si dhe disa gjëra të tjera interesante që "tkinter" dhe "ftplib" na lejojnë të bëjmë.
+Për t'i bërë gjërat më të lehta dhe më abstrakte, ne kemi përdorur librarite tkinter dhe ftplib të Python të cilat ofrojnë një sërë funksionesh që e bëjnë më të lehtë punën me FTP. Ne do të shohim zbatimin për ngarkimin dhe shkarkimin e skedarëve nga serveri, si dhe disa gjëra të tjera interesante që "tkinter" dhe "ftplib" na lejojnë të bëjmë.
 
 ## Çfarë është FTP?
 
@@ -24,11 +24,15 @@ Moduli ftplib është një librari e integruar që vjen tashmë e instaluar me P
 
 > `from ftplib import FTP` <br />
 
+![alt text](README/1.jpg)
+
 Pas kësaj, duhet të fillojmë një lidhje me serverin FTP me të cilin duam të hapim një lidhje komunikimi. Për ta bërë këtë, krijoni një shembull ftp:
 
 > `with ftp.FTP() as ftp_cx:` <br />
 > `ftp_cx.connect(ftp_host, ftp_port)` <br />
 > `ftp_cx.login(ftp_user, ftp_pass)` <br />
+
+![alt text](README/4.jpg) ![alt text](README/5.jpg)
 
 Funksioni connect() merr hostin dhe portin dhe fillon një sesion me serverin.
 
@@ -36,15 +40,13 @@ Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet
 
 Për të ngarkuar në të vërtetë një skedar, ne përdorim metodën storbinary():
 
-> `filename = path.basename(filepath)` <br />
-> `with open(filepath, 'rb') as fh:` <br />
-> `ftp_cx.storbinary('STOR {}'.format(filename), fh)` <br />
+> `filename = path.basename(filepath)` <br /> > `with open(filepath, 'rb') as fh:` <br /> > `ftp_cx.storbinary('STOR {}'.format(filename), fh)` <br />
 
 Për të dërguar skedarin, ne duhet ta hapim atë në modalitetin e leximit binar, pastaj thirrim komanden storbinary(). Argumenti i parë "STOR" në storbinary është një komandë e vlefshme e FTP-se , zakonisht shenohet STOR pastaj emri i skedarit, pra "STOR filename" ku "filename" është ajo që dëshironi të quhen të dhënat e ngarkuara në server.
 
 Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në modalitetin binar pasi që ne po e dërgojmë atë si të dhëna binare. Kjo mund të duket e çuditshme pasi skedari CSV që po dërgojmë është në thelb një skedar teksti i thjeshtë, por dërgimi i tij si të dhëna binare garanton që serveri nuk do ta ndryshojë skedarin në asnjë mënyrë gjatë transportimit; kjo është pothuajse gjithmonë ajo që ne dëshirojmë kur transferojmë skedarë, pavarësisht nga natyra e të dhënave që shkëmbehen.
 
-### Listing files
+### Listimi i skedarëve
 
 Metoda që kemi përdorur për renditjen e skedarëve në një server FTP është nlst (), e cila korrespondon me komandën e vjetër NLST.
 Metoda pranon një numër arbitrar të argumenteve që do t'i bashkangjiten fjalë për fjalë vargut të komandës në server.
