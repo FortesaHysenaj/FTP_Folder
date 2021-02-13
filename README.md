@@ -34,7 +34,7 @@ Pas kësaj, duhet të fillojmë një lidhje me serverin FTP me të cilin duam t�
 
 Funksioni connect() merr hostin dhe portin dhe fillon një sesion me serverin.
 
-Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet të vërtetojë sesionin tonë. Nëse kredencialet tona verifikohen, ne kemi hyrë në server dhe mund të fillojmë të dërgojmë më shumë komanda; nëse jo, një kundërshtim error_perm do të shfaqet.
+Pastaj, login() merr një emër të përdoruesit dhe fjalëkalimin dhe përpiqet të vërtetojë sesionin tonë. Nëse kredencialet tona verifikohen, ne kemi hyrë në server dhe mund të fillojmë të dërgojmë më shumë komanda; nëse jo, një kundërshtim error_perm do të shfaqet.<br />
 ![alt text](README/4.jpg) | ![alt text](README/5.jpg)
 
 ### Ngarkimi i skedarëve
@@ -48,7 +48,8 @@ Për të ngarkuar në të vërtetë një skedar, ne përdorim metodën storbinar
 Për të dërguar skedarin, ne duhet ta hapim atë në modalitetin e leximit binar, pastaj thirrim komanden storbinary(). Argumenti i parë "STOR" në storbinary është një komandë e vlefshme e FTP-se , zakonisht shenohet STOR pastaj emri i skedarit, pra "STOR filename" ku "filename" është ajo që dëshironi të quhen të dhënat e ngarkuara në server.
 
 Argumenti i dytë është vetë objekti i skedarit. Kjo duhet të hapet në modalitetin binar pasi që ne po e dërgojmë atë si të dhëna binare. Kjo mund të duket e çuditshme pasi skedari CSV që po dërgojmë është në thelb një skedar teksti i thjeshtë, por dërgimi i tij si të dhëna binare garanton që serveri nuk do ta ndryshojë skedarin në asnjë mënyrë gjatë transportimit; kjo është pothuajse gjithmonë ajo që ne dëshirojmë kur transferojmë skedarë, pavarësisht nga natyra e të dhënave që shkëmbehen.
-![alt text](README/upload.jpg) | ![alt text](README/server.jpg)
+
+![alt-text-1](README/upload.jpg) | ![alt-text-2](README/server.jpg)
 
 ### Listimi i skedarëve
 
